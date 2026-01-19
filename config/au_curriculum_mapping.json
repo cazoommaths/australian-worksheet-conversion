@@ -1,0 +1,152 @@
+{
+  "year_level_mapping": {
+    "Reception": "Foundation",
+    "Year 1": "Year 1",
+    "Year 2": "Year 2",
+    "Year 3": "Year 3",
+    "Year 4": "Year 4",
+    "Year 5": "Year 5",
+    "Year 6": "Year 6",
+    "Year 7": "Year 7",
+    "Year 8": "Year 8",
+    "Year 9": "Year 9",
+    "Year 10": "Year 10",
+    "Year 11": "Year 11",
+    "Year 12": "Year 12",
+    "Year 13": "Year 12"
+  },
+  "key_stage_mapping": {
+    "EYFS": "Foundation",
+    "KS1": "Years 1-2",
+    "KS2": "Years 3-6",
+    "KS3": "Years 7-10",
+    "KS4": "Years 10-12",
+    "Key Stage 1": "Years 1-2",
+    "Key Stage 2": "Years 3-6",
+    "Key Stage 3": "Years 7-10",
+    "Key Stage 4": "Years 10-12"
+  },
+  "acara_strands": {
+    "Number and Algebra": {
+      "uk_topics": [
+        "Number",
+        "Place Value",
+        "Addition",
+        "Subtraction",
+        "Multiplication",
+        "Division",
+        "Fractions",
+        "Decimals",
+        "Percentages",
+        "Ratio",
+        "Proportion",
+        "Algebra",
+        "Equations",
+        "Sequences",
+        "Patterns",
+        "Money"
+      ],
+      "au_description": "Number and place value, Fractions and decimals, Money and financial mathematics, Patterns and algebra"
+    },
+    "Measurement and Geometry": {
+      "uk_topics": [
+        "Length",
+        "Mass",
+        "Weight",
+        "Capacity",
+        "Volume",
+        "Time",
+        "Area",
+        "Perimeter",
+        "2D Shapes",
+        "3D Shapes",
+        "Angles",
+        "Position",
+        "Direction",
+        "Coordinates",
+        "Transformations",
+        "Symmetry"
+      ],
+      "au_description": "Using units of measurement, Shape, Location and transformation, Geometric reasoning"
+    },
+    "Statistics and Probability": {
+      "uk_topics": [
+        "Data",
+        "Statistics",
+        "Graphs",
+        "Charts",
+        "Averages",
+        "Mean",
+        "Median",
+        "Mode",
+        "Range",
+        "Probability",
+        "Chance"
+      ],
+      "au_description": "Chance, Data representation and interpretation"
+    }
+  },
+  "topic_mapping": {
+    "Number Bonds": "Number Facts",
+    "Times Tables": "Multiplication Facts",
+    "Number Facts": "Number Facts",
+    "Written Methods": "Written Strategies",
+    "Mental Maths": "Mental Computation",
+    "Problem Solving": "Mathematical Reasoning",
+    "Investigations": "Mathematical Investigations",
+    "Roman Numerals": "Roman Numerals",
+    "Negative Numbers": "Integers",
+    "Indices": "Index Notation",
+    "Powers": "Index Notation",
+    "Standard Form": "Scientific Notation",
+    "Surds": "Surds",
+    "Pythagoras": "Pythagoras' Theorem",
+    "Trigonometry": "Trigonometry",
+    "Vectors": "Vectors",
+    "Matrices": "Matrices",
+    "Circle Theorems": "Circle Geometry",
+    "Constructions": "Geometric Constructions",
+    "Loci": "Loci",
+    "Bearings": "Bearings",
+    "Compound Measures": "Rates and Ratios"
+  },
+  "content_timing_notes": {
+    "fractions": "UK introduces fractions earlier; Australian curriculum introduces equivalent fractions in Year 4",
+    "algebra": "UK introduces formal algebra in Year 7; Australian curriculum introduces algebraic thinking from Year 1",
+    "statistics": "Australian curriculum integrates statistics throughout all years more consistently",
+    "probability": "Both curricula cover probability similarly, starting with basic chance in early years"
+  },
+  "state_variations": {
+    "NSW": {
+      "certificate": "HSC (Higher School Certificate)",
+      "year_12_name": "HSC"
+    },
+    "VIC": {
+      "certificate": "VCE (Victorian Certificate of Education)",
+      "year_12_name": "VCE"
+    },
+    "QLD": {
+      "certificate": "QCE (Queensland Certificate of Education)",
+      "year_12_name": "QCE"
+    },
+    "SA": {
+      "certificate": "SACE (South Australian Certificate of Education)",
+      "year_12_name": "SACE"
+    },
+    "WA": {
+      "certificate": "WACE (Western Australian Certificate of Education)",
+      "year_12_name": "WACE"
+    },
+    "TAS": {
+      "certificate": "TCE (Tasmanian Certificate of Education)",
+      "year_12_name": "TCE"
+    },
+    "note": "For general Australian worksheets, use 'Year 11' and 'Year 12' rather than state-specific certificate names"
+  },
+  "assessment_mapping": {
+    "SATs": "NAPLAN",
+    "11+": "Selective School Test",
+    "GCSE": "Year 10-11 Assessment",
+    "A-Level": "Year 12 Assessment"
+  }
+}

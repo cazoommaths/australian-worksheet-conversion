@@ -1,0 +1,89 @@
+{
+  "terminology": {
+    "currency": {
+      "£": "$",
+      "pound": "dollar",
+      "pounds": "dollars",
+      "pence": "cents",
+      "p": "c",
+      "GBP": "AUD"
+    },
+    "education": {
+      "Key Stage 1": "Foundation to Year 2",
+      "Key Stage 2": "Years 3-6",
+      "Key Stage 3": "Years 7-10",
+      "Key Stage 4": "Years 10-12",
+      "KS1": "F-2",
+      "KS2": "Years 3-6",
+      "KS3": "Years 7-10",
+      "KS4": "Years 10-12",
+      "GCSE": "Year 11-12",
+      "A-Level": "Year 12",
+      "A Level": "Year 12",
+      "SATs": "NAPLAN",
+      "Autumn Term": "Term 1",
+      "Spring Term": "Term 2",
+      "Summer Term": "Terms 3-4",
+      "autumn term": "Term 1",
+      "spring term": "Term 2",
+      "summer term": "Terms 3-4",
+      "half term": "school holidays",
+      "revision": "revision",
+      "mark scheme": "marking guide",
+      "scheme of work": "scope and sequence"
+    },
+    "spelling": {
+      "programme": "program",
+      "Programme": "Program"
+    },
+    "places": {
+      "London": "Sydney",
+      "Manchester": "Melbourne",
+      "Birmingham": "Brisbane",
+      "Leeds": "Perth",
+      "Liverpool": "Adelaide",
+      "Edinburgh": "Canberra",
+      "Glasgow": "Darwin",
+      "Bristol": "Hobart",
+      "Sheffield": "Newcastle",
+      "motorway": "highway",
+      "Motorway": "Highway",
+      "M1": "Pacific Highway",
+      "M25": "Sydney Orbital",
+      "high street": "main street",
+      "High Street": "Main Street"
+    },
+    "sports_and_culture": {
+      "Premier League": "AFL/NRL",
+      "football match": "footy match",
+      "football team": "footy team"
+    }
+  },
+  "currency_conversion": {
+    "rate": 1.9,
+    "note": "Approximate GBP to AUD conversion for realistic amounts in word problems"
+  },
+  "preserve_terms": [
+    "maths",
+    "Maths",
+    "colour",
+    "Colour",
+    "centre",
+    "Centre",
+    "metre",
+    "metres",
+    "litre",
+    "litres",
+    "centimetre",
+    "centimetres",
+    "kilometre",
+    "kilometres",
+    "practise",
+    "favourite"
+  ],
+  "notes": {
+    "spelling": "Australian English uses British spelling (colour, centre, metre), so most spelling remains the same",
+    "currency": "Convert amounts using approximately 1 GBP = 2 AUD for realistic word problems",
+    "context": "Replace UK-specific places and references with Australian equivalents"
+  }
+}

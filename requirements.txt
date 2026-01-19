@@ -1,0 +1,26 @@
+# Cazoom AU Converter - Python Dependencies
+
+# PDF Processing
+PyMuPDF>=1.23.0          # For extracting text and images from PDFs (import as 'fitz')
+pdf2image>=1.16.0        # For converting PDF pages to images (requires poppler)
+Pillow>=10.0.0           # Image processing
+
+# Data Handling
+pandas>=2.0.0            # For CSV/Excel processing
+openpyxl>=3.1.0          # For Excel file support
+
+# API & Downloads
+requests>=2.31.0         # For downloading files from Dropbox
+dropbox>=11.36.0         # Official Dropbox SDK (optional, for advanced features)
+python-dotenv>=1.0.0     # For loading environment variables
+
+# AI Integration (for curriculum mapping)
+anthropic>=0.18.0        # Claude API for intelligent mapping
+
+# Utilities
+tqdm>=4.65.0             # Progress bars for batch processing
+python-dateutil>=2.8.0   # Date handling
+
+# Optional: For more advanced PDF editing
+# reportlab>=4.0.0       # For creating new PDFs
+# PyPDF2>=3.0.0          # For merging/splitting PDFs
