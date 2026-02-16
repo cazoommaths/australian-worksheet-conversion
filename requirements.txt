@@ -14,12 +14,20 @@ requests>=2.31.0         # For downloading files from Dropbox
 dropbox>=11.36.0         # Official Dropbox SDK (optional, for advanced features)
 python-dotenv>=1.0.0     # For loading environment variables
 
-# AI Integration (for curriculum mapping)
-anthropic>=0.18.0        # Claude API for intelligent mapping
+# AI Integration - Vision API & Embeddings
+anthropic>=0.34.0        # Claude API with Vision support
+openai>=1.0.0            # For alternative embeddings (optional)
+
+# Database - Supabase
+supabase>=2.0.0          # Supabase Python client
+postgrest>=0.16.0        # PostgreSQL REST API client
+pgvector>=0.2.0          # PostgreSQL vector extension support
 
 # Utilities
 tqdm>=4.65.0             # Progress bars for batch processing
 python-dateutil>=2.8.0   # Date handling
+tenacity>=8.2.0          # Retry logic and rate limiting
+backoff>=2.2.0           # Exponential backoff for API calls
 
 # Optional: For more advanced PDF editing
 # reportlab>=4.0.0       # For creating new PDFs
