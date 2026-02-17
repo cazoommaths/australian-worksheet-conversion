@@ -44,45 +44,70 @@ REQUEST_DELAY = 60 / MAX_REQUESTS_PER_MINUTE  # 6 seconds between requests
 # Vision extraction prompt
 VISION_EXTRACTION_PROMPT = """Analyze this mathematics worksheet page and extract detailed information.
 
-Return a JSON object with the following structure:
+Return a JSON object with EXACTLY this structure (no extra keys, no markdown fences):
 
 {
-  "title": "The worksheet title (if visible)",
-  "year_level": "UK year level (e.g., Year 5, GCSE, KS2)",
-  "topic": "Main topic (e.g., Fractions, Algebra)",
-  "subtopic": "Specific subtopic (e.g., Adding Fractions, Linear Equations)",
-  "strand": "ACARA strand classification (Number and Algebra, Measurement and Geometry, or Statistics and Probability)",
+  "title": "The worksheet title as printed on the page",
+  "year_level": "UK year level exactly as stated (e.g., Year 5, Year 7, GCSE, KS2, A-Level)",
+  "topic": "Main mathematical topic (e.g., Fractions, Algebra, Geometry, Statistics)",
+  "subtopic": "Specific focus (e.g., Adding Fractions, Linear Equations, Area of Triangles)",
+  "strand": "One of: Number and Algebra | Measurement and Geometry | Statistics and Probability",
+
+  "difficulty_level": "One of: foundation | core | higher | mixed  — based on content complexity and any tier labels",
+  "total_questions": 24,
+  "estimated_time_minutes": 30,
+
   "skills_covered": ["skill1", "skill2", "skill3"],
   "prerequisite_skills": ["prereq1", "prereq2"],
+
+  "has_equations": true,
+  "equation_types": ["linear", "quadratic", "simultaneous", "trigonometric", "exponential", "inequalities"],
+
   "sections": [
     {
-      "label": "Section name or number",
-      "type": "question_set|worked_example|instructions|challenge",
-      "question_count": 5,
+      "label": "Section A",
+      "type": "question_set|worked_example|instructions|challenge|extension",
+      "question_count": 10,
       "has_diagrams": true,
+      "has_equations": false,
       "diagram_descriptions": ["bar chart showing rainfall", "grid for plotting coordinates"]
     }
   ],
+
   "difficulty_progression": "constant|easy_to_hard|mixed|scaffolded",
+
   "diagram_inventory": {
     "count": 3,
-    "types": ["graph", "geometric_shape", "number_line"],
-    "descriptions": ["coordinate grid with axes", "triangle with labeled sides", "number line from -5 to 5"]
+    "types": ["graph", "geometric_shape", "number_line", "table", "coordinate_grid", "fraction_bar", "pie_chart"],
+    "descriptions": ["coordinate grid with axes labeled -5 to 5", "triangle with sides 3cm 4cm 5cm"]
   },
+
   "uk_specific_elements": {
     "currency": ["£2.50", "35p"],
     "places": ["London", "Manchester"],
-    "terms": ["Key Stage 2", "SATs"]
+    "terms": ["Key Stage 2", "SATs", "GCSE Foundation"]
   },
+
   "content_flags": {
     "has_word_problems": true,
     "has_real_world_context": true,
     "has_calculator_questions": false,
-    "has_extension_tasks": true
+    "has_extension_tasks": true,
+    "has_worked_examples": false,
+    "has_answer_spaces": true,
+    "has_fill_in_blanks": false,
+    "has_multiple_choice": false
   }
 }
 
-Be thorough and accurate. If information is not visible or unclear, use null or empty arrays."""
+COUNTING RULES — follow carefully:
+- total_questions: count every individual question or sub-part (a, b, c count as 3). Include all sections.
+- estimated_time_minutes: assume ~1 min per simple question, ~2-3 min per multi-step or word problem, ~3-5 min per diagram/construction question. Round to nearest 5.
+- difficulty_level: foundation = basic recall/single-step; core = standard curriculum; higher = extension/GCSE Higher/A-Level; mixed = worksheet explicitly spans levels.
+- equation_types: only list types actually present; use empty array [] if no equations.
+- has_equations: true only if students must solve or manipulate algebraic expressions/equations.
+
+Be thorough and precise. Use null for fields that are genuinely not visible. Use [] for empty arrays, never null for arrays."""
 
 
 class RateLimiter:
@@ -288,6 +313,36 @@ class VisionExtractor:
                 if "data" in page and "skills_covered" in page["data"]:
                     all_skills.update(page["data"]["skills_covered"])
             result["skills_covered"] = list(all_skills)
+
+            # Sum total_questions across all pages
+            total_q = 0
+            for page in page_data:
+                if "data" in page:
+                    q = page["data"].get("total_questions")
+                    if isinstance(q, int):
+                        total_q += q
+            result["total_questions"] = total_q if total_q > 0 else None
+
+            # Sum estimated_time across all pages
+            total_time = 0
+            for page in page_data:
+                if "data" in page:
+                    t = page["data"].get("estimated_time_minutes")
+                    if isinstance(t, int):
+                        total_time += t
+            result["estimated_time_minutes"] = total_time if total_time > 0 else None
+
+            # Merge equation_types from all pages
+            all_eq_types = set()
+            has_equations = False
+            for page in page_data:
+                if "data" in page:
+                    if page["data"].get("has_equations"):
+                        has_equations = True
+                    for et in page["data"].get("equation_types", []) or []:
+                        all_eq_types.add(et)
+            result["has_equations"] = has_equations
+            result["equation_types"] = list(all_eq_types)
 
         # Add metadata
         result["_metadata"] = {

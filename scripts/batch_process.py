@@ -186,6 +186,9 @@ class BatchProcessor:
 
         try:
             # Prepare data for insertion
+            content_flags = worksheet_data.get('content_flags', {}) or {}
+            diagram_inv   = worksheet_data.get('diagram_inventory', {}) or {}
+
             insert_data = {
                 'file_name': worksheet_data['file_name'],
                 'file_path': worksheet_data.get('file_path'),
@@ -210,14 +213,23 @@ class BatchProcessor:
                 'prerequisite_skills': worksheet_data.get('prerequisite_skills', []),
                 'sections': worksheet_data.get('sections', []),
                 'difficulty_progression': worksheet_data.get('difficulty_progression'),
-                'diagram_inventory': worksheet_data.get('diagram_inventory', {}),
+                'diagram_inventory': diagram_inv,
 
-                # Flags
-                'has_diagrams': worksheet_data.get('has_diagrams', False),
-                'has_word_problems': worksheet_data.get('content_flags', {}).get('has_word_problems', False),
-                'has_real_world_context': worksheet_data.get('content_flags', {}).get('has_real_world_context', False),
-                'has_calculator_questions': worksheet_data.get('content_flags', {}).get('has_calculator_questions', False),
-                'has_extension_tasks': worksheet_data.get('content_flags', {}).get('has_extension_tasks', False),
+                # New extraction fields
+                'total_questions':        worksheet_data.get('total_questions'),
+                'estimated_time_minutes': worksheet_data.get('estimated_time_minutes'),
+                'difficulty_level':       worksheet_data.get('difficulty_level'),
+                'has_equations':          worksheet_data.get('has_equations', False),
+                'equation_types':         worksheet_data.get('equation_types', []),
+
+                # Diagram flags (derive has_diagrams from inventory count)
+                'has_diagrams': (diagram_inv.get('count', 0) or 0) > 0,
+
+                # Content flags
+                'has_word_problems':      content_flags.get('has_word_problems', False),
+                'has_real_world_context': content_flags.get('has_real_world_context', False),
+                'has_calculator_questions': content_flags.get('has_calculator_questions', False),
+                'has_extension_tasks':    content_flags.get('has_extension_tasks', False),
 
                 # UK-specific elements
                 'uk_specific_elements': worksheet_data.get('uk_specific_elements', {}),
@@ -232,7 +244,30 @@ class BatchProcessor:
                 'model_version': worksheet_data.get('model')
             }
 
-            # Insert into database
+            # If we matched this file to a master record, update that record
+            # rather than inserting a new one (avoid duplicates)
+            master_id = worksheet_data.get('master_id')
+            if master_id:
+                insert_data['master_id'] = master_id
+
+            # If a master_id is set, update the pre-imported record instead of inserting
+            master_id = insert_data.pop('master_id', None)
+            if master_id:
+                existing = self.supabase.table('worksheets') \
+                    .select('id') \
+                    .eq('master_id', master_id) \
+                    .limit(1) \
+                    .execute()
+                if existing.data:
+                    worksheet_id = existing.data[0]['id']
+                    self.supabase.table('worksheets') \
+                        .update(insert_data) \
+                        .eq('id', worksheet_id) \
+                        .execute()
+                    print(f"  ✓ Updated existing record (ID: {worksheet_id})")
+                    return worksheet_id
+
+            # Otherwise insert a new record
             response = self.supabase.table('worksheets').insert(insert_data).execute()
             worksheet_id = response.data[0]['id']
             print(f"  ✓ Stored in Supabase (ID: {worksheet_id})")
