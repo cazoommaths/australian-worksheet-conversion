@@ -12,7 +12,8 @@ CREATE TABLE IF NOT EXISTS worksheets (
     -- Basic metadata
     file_name TEXT NOT NULL,
     file_path TEXT,
-    dropbox_url TEXT,
+    storage_path TEXT,        -- Path within Supabase Storage bucket
+    storage_url TEXT,         -- Public/signed URL for direct access
 
     -- UK curriculum identifiers
     uk_year_level TEXT,

@@ -3,25 +3,34 @@
 batch_process.py - Full pipeline orchestration for worksheet intelligence platform
 
 This script orchestrates the complete workflow:
-1. Read worksheet catalog (CSV or Supabase)
-2. Download PDFs (if needed)
-3. Extract with Vision API
-4. Store in Supabase
-5. Apply AU curriculum mapping
-6. Generate embeddings
-7. Log progress and handle errors
+1. Fetch PDFs from Supabase Storage (via fetch_from_storage.py)
+2. Extract with Vision API
+3. Store results in Supabase worksheets table
+4. Apply AU curriculum mapping
+5. Generate embeddings
+6. Log progress and handle errors
 
 Features:
 - Resume from where it left off
-- Parallel processing where safe
 - Comprehensive error logging
 - Progress tracking
 - Dry-run mode
 
 Usage:
-    python scripts/batch_process.py --csv data/worksheets_SAMPLE.csv --limit 10
-    python scripts/batch_process.py --all --skip-download
+    # Download from storage then process
+    python scripts/batch_process.py --from-storage --limit 5
+
+    # Process PDFs already in data/input
+    python scripts/batch_process.py --folder data/input
+
+    # Dry run (no database writes)
+    python scripts/batch_process.py --folder data/input --dry-run
+
+    # Resume interrupted run
     python scripts/batch_process.py --resume
+
+    # Reset progress tracking
+    python scripts/batch_process.py --reset
 """
 
 import os
@@ -41,6 +50,7 @@ from tqdm import tqdm
 # Import our other modules
 from extract_with_vision import VisionExtractor
 from generate_embeddings import EmbeddingGenerator
+from fetch_from_storage import fetch_worksheets
 
 # Load environment variables
 load_dotenv()
@@ -179,6 +189,8 @@ class BatchProcessor:
             insert_data = {
                 'file_name': worksheet_data['file_name'],
                 'file_path': worksheet_data.get('file_path'),
+                'storage_path': worksheet_data.get('storage_path'),
+                'storage_url': worksheet_data.get('storage_url'),
                 'title': worksheet_data.get('title'),
 
                 # UK identifiers
@@ -306,73 +318,19 @@ class BatchProcessor:
             self.log_error(file_name, str(e))
             return False
 
-    def process_from_csv(self, csv_path: str, limit: Optional[int] = None,
-                        skip_download: bool = False):
+    def process_from_storage(self, limit: Optional[int] = None, folder: str = ""):
         """
-        Process worksheets listed in a CSV file.
+        Fetch PDFs from Supabase Storage then process them all.
 
         Args:
-            csv_path: Path to CSV file with worksheet list
-            limit: Optional limit on number to process
-            skip_download: If True, assume PDFs already downloaded
+            limit: Optional cap on number of files to fetch and process
+            folder: Sub-folder within the storage bucket
         """
-        print(f"\nReading worksheet catalog from: {csv_path}")
-        df = pd.read_csv(csv_path)
+        print("\nFetching PDFs from Supabase Storage...")
+        fetch_worksheets(limit=limit, folder=folder)
 
-        if limit:
-            df = df.head(limit)
-            print(f"Limiting to first {limit} worksheets")
-
-        print(f"Found {len(df)} worksheets to process\n")
-
-        success_count = 0
-        error_count = 0
-        skipped_count = 0
-
-        for idx, row in tqdm(df.iterrows(), total=len(df), desc="Processing worksheets"):
-            worksheet_info = row.to_dict()
-            file_name = worksheet_info.get('worksheet_name', f"worksheet_{idx}.pdf")
-
-            # Sanitize filename
-            file_name = file_name.replace(' ', '-').replace('/', '-')
-            if not file_name.endswith('.pdf'):
-                file_name += '.pdf'
-
-            # Determine PDF path
-            pdf_path = os.path.join('data/input', file_name)
-
-            # Check if file exists
-            if not os.path.exists(pdf_path):
-                if skip_download:
-                    print(f"⊘ Skipping {file_name} (not found)")
-                    skipped_count += 1
-                    continue
-                else:
-                    # TODO: Implement download from Dropbox
-                    print(f"⚠ PDF not found: {pdf_path}")
-                    print(f"  Dropbox URL: {worksheet_info.get('dropbox_link')}")
-                    skipped_count += 1
-                    continue
-
-            # Process worksheet
-            success = self.process_worksheet(pdf_path, worksheet_info)
-            if success:
-                success_count += 1
-            else:
-                error_count += 1
-
-        # Final summary
-        print("\n" + "="*70)
-        print("BATCH PROCESSING SUMMARY")
-        print("="*70)
-        print(f"Total worksheets: {len(df)}")
-        print(f"Successfully processed: {success_count}")
-        print(f"Errors: {error_count}")
-        print(f"Skipped: {skipped_count}")
-        print(f"Progress saved to: {PROGRESS_FILE}")
-        if error_count > 0:
-            print(f"Error log: {ERROR_LOG_FILE}")
-        print("="*70)
+        # Now process whatever landed in data/input
+        self.process_folder('data/input', limit=limit)
 
     def process_folder(self, folder_path: str, limit: Optional[int] = None):
         """
@@ -419,14 +377,22 @@ def main():
         description='Batch process worksheets through the intelligence platform pipeline'
     )
 
-    # Input sources
-    parser.add_argument('--csv', help='Process worksheets from CSV file')
-    parser.add_argument('--folder', default='data/input', help='Process all PDFs in folder')
-    parser.add_argument('--all', action='store_true', help='Process all worksheets in default folder')
+    # Input sources (mutually exclusive)
+    source_group = parser.add_mutually_exclusive_group()
+    source_group.add_argument(
+        '--from-storage',
+        action='store_true',
+        help='Fetch PDFs from Supabase Storage then process (default if no source given)'
+    )
+    source_group.add_argument(
+        '--folder',
+        metavar='PATH',
+        help='Process PDFs already in a local folder (default: data/input)'
+    )
 
     # Options
     parser.add_argument('--limit', type=int, help='Limit number of worksheets to process')
-    parser.add_argument('--skip-download', action='store_true', help='Skip downloading, assume PDFs exist')
+    parser.add_argument('--storage-folder', default='', help='Sub-folder within storage bucket')
     parser.add_argument('--resume', action='store_true', help='Resume from previous run')
     parser.add_argument('--dry-run', action='store_true', help='Dry run - do not write to database')
     parser.add_argument('--reset', action='store_true', help='Reset progress tracking')
@@ -447,18 +413,11 @@ def main():
         print("⚠ DRY RUN MODE - No database writes will occur\n")
 
     # Process based on input source
-    if args.csv:
-        processor.process_from_csv(
-            args.csv,
-            limit=args.limit,
-            skip_download=args.skip_download
-        )
-    elif args.all or args.folder:
-        folder = args.folder if args.folder != 'data/input' else 'data/input'
-        processor.process_folder(folder, limit=args.limit)
+    if args.folder:
+        processor.process_folder(args.folder, limit=args.limit)
     else:
-        print("Please specify --csv, --folder, or --all")
-        parser.print_help()
+        # Default: fetch from Supabase Storage then process
+        processor.process_from_storage(limit=args.limit, folder=args.storage_folder)
 
 
 if __name__ == '__main__':
