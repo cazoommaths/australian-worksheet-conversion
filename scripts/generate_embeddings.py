@@ -2,19 +2,20 @@
 """
 generate_embeddings.py - Generate vector embeddings for semantic search
 
-This script creates embeddings for worksheet content using Claude API's
-text embeddings, enabling semantic similarity search in the database.
+This script creates embeddings for worksheet extraction content, enabling
+semantic similarity search in the database.
 
 Features:
-- Generate embeddings for title and content separately
+- Generate embeddings for extraction content
 - Batch processing with progress tracking
-- Update Supabase database with embeddings
+- Update worksheet_extractions table with embeddings
 - Resume capability for interrupted runs
 
 Usage:
     python scripts/generate_embeddings.py --all
     python scripts/generate_embeddings.py --worksheet-id <uuid>
     python scripts/generate_embeddings.py --missing-only
+    python scripts/generate_embeddings.py --stats
 """
 
 import os
@@ -150,61 +151,49 @@ class EmbeddingGenerator:
 
         return '\n'.join(parts)
 
-    def generate_worksheet_embeddings(self, worksheet_id: str) -> Dict[str, List[float]]:
+    def generate_worksheet_embeddings(self, extraction_id: str) -> List[float]:
         """
-        Generate both title and content embeddings for a worksheet.
+        Generate content embedding for a worksheet extraction.
 
         Args:
-            worksheet_id: UUID of the worksheet
+            extraction_id: UUID of the worksheet extraction
 
         Returns:
-            Dict with 'title' and 'content' embedding vectors
+            Embedding vector for the content
         """
-        # Fetch worksheet from database
-        response = self.supabase.table('worksheets').select('*').eq('id', worksheet_id).single().execute()
-        worksheet = response.data
-
-        embeddings = {}
-
-        # Generate title embedding
-        if worksheet.get('title'):
-            print(f"  Generating title embedding...")
-            embeddings['title'] = self.generate_embedding(worksheet['title'])
-            time.sleep(RATE_LIMIT_DELAY)
+        # Fetch extraction from database
+        response = self.supabase.table('worksheet_extractions').select('*').eq('id', extraction_id).single().execute()
+        extraction = response.data
 
         # Generate content embedding
         print(f"  Generating content embedding...")
-        content_text = self.create_content_text(worksheet)
-        embeddings['content'] = self.generate_embedding(content_text)
+        content_text = self.create_content_text(extraction)
+        embedding = self.generate_embedding(content_text)
         time.sleep(RATE_LIMIT_DELAY)
 
-        return embeddings
+        return embedding
 
-    def update_worksheet_embeddings(self, worksheet_id: str, embeddings: Dict[str, List[float]]):
+    def update_extraction_embeddings(self, extraction_id: str, embedding: List[float]):
         """
-        Update worksheet in database with generated embeddings.
+        Update worksheet extraction in database with generated embedding.
 
         Args:
-            worksheet_id: UUID of the worksheet
-            embeddings: Dict with 'title' and 'content' embeddings
+            extraction_id: UUID of the worksheet extraction
+            embedding: Content embedding vector
         """
-        update_data = {}
+        update_data = {
+            'embedding_content': embedding
+        }
 
-        if 'title' in embeddings:
-            update_data['embedding_title'] = embeddings['title']
-        if 'content' in embeddings:
-            update_data['embedding_content'] = embeddings['content']
+        self.supabase.table('worksheet_extractions').update(update_data).eq('id', extraction_id).execute()
+        print(f"  ✓ Updated embedding in database")
 
-        if update_data:
-            self.supabase.table('worksheets').update(update_data).eq('id', worksheet_id).execute()
-            print(f"  ✓ Updated embeddings in database")
-
-    def process_worksheet(self, worksheet_id: str):
-        """Process a single worksheet: generate and store embeddings."""
-        print(f"\nProcessing worksheet: {worksheet_id}")
+    def process_worksheet(self, extraction_id: str):
+        """Process a single worksheet extraction: generate and store embedding."""
+        print(f"\nProcessing extraction: {extraction_id}")
         try:
-            embeddings = self.generate_worksheet_embeddings(worksheet_id)
-            self.update_worksheet_embeddings(worksheet_id, embeddings)
+            embedding = self.generate_worksheet_embeddings(extraction_id)
+            self.update_extraction_embeddings(extraction_id, embedding)
             return True
         except Exception as e:
             print(f"  ✗ Error: {e}")
@@ -212,41 +201,38 @@ class EmbeddingGenerator:
 
     def process_all_worksheets(self, missing_only: bool = False):
         """
-        Process all worksheets in the database.
+        Process all worksheet extractions in the database.
 
         Args:
-            missing_only: If True, only process worksheets without embeddings
+            missing_only: If True, only process extractions without embeddings
         """
         # Build query
-        query = self.supabase.table('worksheets').select('id, file_name, title, status')
+        query = self.supabase.table('worksheet_extractions').select('id, file_name, title')
 
         if missing_only:
             query = query.is_('embedding_content', 'null')
 
-        # Only process completed worksheets
-        query = query.eq('status', 'completed')
-
         # Execute query
         response = query.execute()
-        worksheets = response.data
+        extractions = response.data
 
-        if not worksheets:
-            print("No worksheets found to process")
+        if not extractions:
+            print("No extractions found to process")
             return
 
-        print(f"Found {len(worksheets)} worksheets to process")
-        print(f"Estimated time: {len(worksheets) * 2 * RATE_LIMIT_DELAY / 60:.1f} minutes\n")
+        print(f"Found {len(extractions)} extractions to process")
+        print(f"Estimated time: {len(extractions) * RATE_LIMIT_DELAY / 60:.1f} minutes\n")
 
         success_count = 0
         error_count = 0
 
         # Process with progress bar
-        for worksheet in tqdm(worksheets, desc="Generating embeddings"):
-            worksheet_id = worksheet['id']
-            title = worksheet.get('title', worksheet.get('file_name', 'Unknown'))
+        for extraction in tqdm(extractions, desc="Generating embeddings"):
+            extraction_id = extraction['id']
+            title = extraction.get('title', extraction.get('file_name', 'Unknown'))
             print(f"\n{title}")
 
-            success = self.process_worksheet(worksheet_id)
+            success = self.process_worksheet(extraction_id)
             if success:
                 success_count += 1
             else:
@@ -256,31 +242,31 @@ class EmbeddingGenerator:
         print("\n" + "="*60)
         print("EMBEDDING GENERATION SUMMARY")
         print("="*60)
-        print(f"Total processed: {len(worksheets)}")
+        print(f"Total processed: {len(extractions)}")
         print(f"Successful: {success_count}")
         print(f"Errors: {error_count}")
         print("="*60)
 
     def get_worksheet_statistics(self):
-        """Get statistics about worksheet embeddings."""
-        # Total worksheets
-        total = self.supabase.table('worksheets').select('id', count='exact').execute()
+        """Get statistics about worksheet extraction embeddings."""
+        # Total extractions
+        total = self.supabase.table('worksheet_extractions').select('id', count='exact').execute()
         total_count = total.count
 
-        # Worksheets with embeddings
-        with_embeddings = self.supabase.table('worksheets').select('id', count='exact').not_.is_('embedding_content', 'null').execute()
+        # Extractions with embeddings
+        with_embeddings = self.supabase.table('worksheet_extractions').select('id', count='exact').not_.is_('embedding_content', 'null').execute()
         embedded_count = with_embeddings.count
 
-        # Worksheets ready but not embedded
-        ready = self.supabase.table('worksheets').select('id', count='exact').eq('status', 'completed').is_('embedding_content', 'null').execute()
-        ready_count = ready.count
+        # Extractions without embeddings
+        without_embeddings = self.supabase.table('worksheet_extractions').select('id', count='exact').is_('embedding_content', 'null').execute()
+        without_count = without_embeddings.count
 
         print("\n" + "="*60)
         print("EMBEDDING STATISTICS")
         print("="*60)
-        print(f"Total worksheets: {total_count}")
+        print(f"Total extractions: {total_count}")
         print(f"With embeddings: {embedded_count}")
-        print(f"Without embeddings (completed): {ready_count}")
+        print(f"Without embeddings: {without_count}")
         print(f"Coverage: {(embedded_count / total_count * 100) if total_count > 0 else 0:.1f}%")
         print("="*60)
 

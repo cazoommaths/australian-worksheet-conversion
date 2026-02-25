@@ -5,7 +5,7 @@ batch_process.py - Full pipeline orchestration for worksheet intelligence platfo
 This script orchestrates the complete workflow:
 1. Fetch PDFs from Supabase Storage (via fetch_from_storage.py)
 2. Extract with Vision API
-3. Store results in Supabase worksheets table
+3. Store results in Supabase worksheet_extractions table
 4. Apply AU curriculum mapping
 5. Generate embeddings
 6. Log progress and handle errors
@@ -176,24 +176,21 @@ class BatchProcessor:
 
     def store_in_supabase(self, worksheet_data: Dict) -> Optional[str]:
         """
-        Store worksheet data in Supabase.
+        Store worksheet extraction data in Supabase worksheet_extractions table.
 
-        Returns the worksheet ID if successful, None otherwise.
+        Returns the extraction ID if successful, None otherwise.
         """
         if not self.has_supabase or self.dry_run:
             print("  [DRY RUN] Would store in Supabase")
             return None
 
         try:
-            # Prepare data for insertion
+            # Prepare data for insertion into worksheet_extractions
             content_flags = worksheet_data.get('content_flags', {}) or {}
             diagram_inv   = worksheet_data.get('diagram_inventory', {}) or {}
 
             insert_data = {
                 'file_name': worksheet_data['file_name'],
-                'file_path': worksheet_data.get('file_path'),
-                'storage_path': worksheet_data.get('storage_path'),
-                'storage_url': worksheet_data.get('storage_url'),
                 'title': worksheet_data.get('title'),
 
                 # UK identifiers
@@ -203,8 +200,6 @@ class BatchProcessor:
 
                 # AU mapping
                 'au_year_level': worksheet_data.get('au_year_level'),
-                'au_topic': worksheet_data.get('au_topic'),
-                'au_subtopic': worksheet_data.get('au_subtopic'),
                 'acara_strand': worksheet_data.get('acara_strand'),
 
                 # Extracted content
@@ -215,63 +210,55 @@ class BatchProcessor:
                 'difficulty_progression': worksheet_data.get('difficulty_progression'),
                 'diagram_inventory': diagram_inv,
 
-                # New extraction fields
-                'total_questions':        worksheet_data.get('total_questions'),
+                # Worksheet characteristics
+                'total_questions': worksheet_data.get('total_questions'),
                 'estimated_time_minutes': worksheet_data.get('estimated_time_minutes'),
-                'difficulty_level':       worksheet_data.get('difficulty_level'),
-                'has_equations':          worksheet_data.get('has_equations', False),
-                'equation_types':         worksheet_data.get('equation_types', []),
-
-                # Diagram flags (derive has_diagrams from inventory count)
-                'has_diagrams': (diagram_inv.get('count', 0) or 0) > 0,
+                'difficulty_level': worksheet_data.get('difficulty_level'),
 
                 # Content flags
-                'has_word_problems':      content_flags.get('has_word_problems', False),
+                'has_diagrams': (diagram_inv.get('count', 0) or 0) > 0,
+                'has_word_problems': content_flags.get('has_word_problems', False),
+                'has_worked_examples': content_flags.get('has_worked_examples', False),
                 'has_real_world_context': content_flags.get('has_real_world_context', False),
-                'has_calculator_questions': content_flags.get('has_calculator_questions', False),
-                'has_extension_tasks':    content_flags.get('has_extension_tasks', False),
+                'has_multi_step_problems': content_flags.get('has_multi_step_problems', False),
+                'has_equations': worksheet_data.get('has_equations', False),
+                'equation_types': worksheet_data.get('equation_types', []),
 
-                # UK-specific elements
+                # Localization needs
                 'uk_specific_elements': worksheet_data.get('uk_specific_elements', {}),
 
-                # Status
-                'status': 'completed',
-                'extraction_method': 'vision_api',
-                'extracted_at': datetime.now().isoformat(),
+                # Additional content flags (store full flags object)
+                'content_flags': content_flags,
 
-                # Metadata
-                'page_count': worksheet_data.get('page_count'),
-                'model_version': worksheet_data.get('model')
+                # Extraction metadata
+                'extraction_method': 'claude_vision',
+                'model_version': worksheet_data.get('model', 'claude-sonnet-4-20250514'),
+                'extraction_confidence': None,  # Can add confidence scoring later
+                'extracted_at': datetime.now().isoformat()
             }
 
-            # If we matched this file to a master record, update that record
-            # rather than inserting a new one (avoid duplicates)
-            master_id = worksheet_data.get('master_id')
-            if master_id:
-                insert_data['master_id'] = master_id
+            # Check if we already have an extraction for this file (update if exists)
+            existing = self.supabase.table('worksheet_extractions') \
+                .select('id') \
+                .eq('file_name', worksheet_data['file_name']) \
+                .limit(1) \
+                .execute()
 
-            # If a master_id is set, update the pre-imported record instead of inserting
-            master_id = insert_data.pop('master_id', None)
-            if master_id:
-                existing = self.supabase.table('worksheets') \
-                    .select('id') \
-                    .eq('master_id', master_id) \
-                    .limit(1) \
+            if existing.data:
+                # Update existing extraction
+                extraction_id = existing.data[0]['id']
+                self.supabase.table('worksheet_extractions') \
+                    .update(insert_data) \
+                    .eq('id', extraction_id) \
                     .execute()
-                if existing.data:
-                    worksheet_id = existing.data[0]['id']
-                    self.supabase.table('worksheets') \
-                        .update(insert_data) \
-                        .eq('id', worksheet_id) \
-                        .execute()
-                    print(f"  ✓ Updated existing record (ID: {worksheet_id})")
-                    return worksheet_id
-
-            # Otherwise insert a new record
-            response = self.supabase.table('worksheets').insert(insert_data).execute()
-            worksheet_id = response.data[0]['id']
-            print(f"  ✓ Stored in Supabase (ID: {worksheet_id})")
-            return worksheet_id
+                print(f"  ✓ Updated extraction (ID: {extraction_id})")
+                return extraction_id
+            else:
+                # Insert new extraction
+                response = self.supabase.table('worksheet_extractions').insert(insert_data).execute()
+                extraction_id = response.data[0]['id']
+                print(f"  ✓ Stored extraction (ID: {extraction_id})")
+                return extraction_id
 
         except Exception as e:
             print(f"  ✗ Supabase error: {e}")
