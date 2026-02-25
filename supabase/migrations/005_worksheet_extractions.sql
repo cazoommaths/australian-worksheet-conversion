@@ -105,7 +105,6 @@ SELECT
     w.dropbox_url,
     w.is_free,
     w.resource_type,
-    w.tags,
     w.status as catalog_status,
     e.id as extraction_id,
     e.title,
