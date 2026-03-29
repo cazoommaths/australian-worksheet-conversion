@@ -1,0 +1,1961 @@
+[
+  {
+    "id": "510dc70d-a3d4-4920-b6de-ab7b21be31a0",
+    "file_name": "Cazoom Maths. Area and Perimeter. Area of Non-Right Angled Triangles. Answers.pdf",
+    "file_path": "data/input/Cazoom Maths. Area and Perimeter. Area of Non-Right Angled Triangles. Answers.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE Foundation",
+    "uk_topic": "Geometry",
+    "uk_subtopic": "Area of Non-Right Angled Triangles",
+    "au_year_level": "GCSE Foundation",
+    "au_topic": "Geometry",
+    "au_subtopic": "Area of Non-Right Angled Triangles",
+    "acara_strand": "Measurement and Geometry",
+    "acara_content_codes": null,
+    "title": "Area of Non-Right Angled Triangles",
+    "extraction_data": {},
+    "skills_covered": [
+      "area of triangles",
+      "Understanding non-right angled triangles",
+      "area of rectangles",
+      "using area formulas",
+      "measuring from grid diagrams",
+      "identifying perpendicular height",
+      "Calculating area using base and height",
+      "calculating area of composite shapes",
+      "applying area formula to non-right angled triangles",
+      "solving for missing dimensions",
+      "Drawing triangles on coordinate grid",
+      "calculating area of triangles using base and height"
+    ],
+    "prerequisite_skills": [
+      "basic area formula",
+      "reading measurements from diagrams",
+      "understanding perpendicular lines"
+    ],
+    "sections": [
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 5,
+        "diagram_descriptions": [
+          "five non-right angled triangles drawn on 1cm squared grid paper with dotted lines showing height"
+        ]
+      },
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 6,
+        "diagram_descriptions": [
+          "six triangles with labeled dimensions showing base and perpendicular height measurements"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section C",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 1,
+        "diagram_descriptions": [
+          "1cm squared coordinate grid",
+          "two example triangles drawn in red"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "worked_example",
+        "label": "Section D",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 1,
+        "diagram_descriptions": [
+          "two yellow triangles with measurements",
+          "calculations showing area formula application"
+        ]
+      },
+      {
+        "page": 3,
+        "type": "question_set",
+        "label": "Section E",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 3,
+        "diagram_descriptions": [
+          "composite shape with rectangle and two triangles",
+          "triangle and rectangle with dimensions",
+          "square with inscribed triangle creating shaded regions"
+        ]
+      }
+    ],
+    "difficulty_progression": "scaffolded",
+    "diagram_inventory": {
+      "count": 11,
+      "types": [
+        "geometric_shape",
+        "coordinate_grid"
+      ],
+      "descriptions": [
+        "triangles on 1cm squared grid with dotted perpendicular height lines",
+        "triangles with labeled base and height measurements in cm"
+      ]
+    },
+    "has_diagrams": true,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Foundation",
+        "cm squared paper"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": false,
+    "has_real_world_context": false,
+    "has_calculator_questions": true,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:29:36.496549+00:00",
+    "updated_at": "2026-02-18T18:43:30.212014+00:00",
+    "extracted_at": "2026-02-18T18:29:34.928476+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 16,
+    "estimated_time_minutes": 50,
+    "difficulty_level": "foundation",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "b0a54cbc-47c7-4e20-940c-554c7e5e414d",
+    "file_name": "Cazoom Maths. Area and Perimeter. Area of Non-Right Angled Triangles.pdf",
+    "file_path": "data/input/Cazoom Maths. Area and Perimeter. Area of Non-Right Angled Triangles.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE Foundation",
+    "uk_topic": "Geometry",
+    "uk_subtopic": "Area of Non-Right Angled Triangles",
+    "au_year_level": "GCSE Foundation",
+    "au_topic": "Geometry",
+    "au_subtopic": "Area of Non-Right Angled Triangles",
+    "acara_strand": "Measurement and Geometry",
+    "acara_content_codes": null,
+    "title": "Area of Non-Right Angled Triangles",
+    "extraction_data": {},
+    "skills_covered": [
+      "Drawing triangles on grid",
+      "applying area formula for triangles",
+      "Measuring on grid paper",
+      "Area formula for triangles",
+      "using perpendicular height",
+      "calculating area of triangles",
+      "calculating area using grid squares",
+      "Calculating area using base and height",
+      "calculating area of composite shapes",
+      "using area relationships to find missing lengths",
+      "calculating area of rectangles",
+      "identifying base and height of triangles"
+    ],
+    "prerequisite_skills": [
+      "basic area concepts",
+      "counting grid squares",
+      "understanding perpendicular lines",
+      "basic multiplication"
+    ],
+    "sections": [
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 5,
+        "diagram_descriptions": [
+          "triangles drawn on 1cm squared grid paper with dotted rectangles showing bounding boxes"
+        ]
+      },
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 6,
+        "diagram_descriptions": [
+          "triangles with labeled dimensions and dotted perpendicular height lines"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section C",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 1,
+        "diagram_descriptions": [
+          "1cm squared grid for drawing triangles"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section D",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 2,
+        "diagram_descriptions": [
+          "Two non-right angled triangles with 3cm base measurements"
+        ]
+      },
+      {
+        "page": 3,
+        "type": "question_set",
+        "label": "Section E",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 3,
+        "diagram_descriptions": [
+          "composite shape with rectangle and two congruent triangles",
+          "triangle and rectangle with dimensions",
+          "square with inscribed triangle creating shaded region"
+        ]
+      }
+    ],
+    "difficulty_progression": "scaffolded",
+    "diagram_inventory": {
+      "count": 11,
+      "types": [
+        "geometric_shape"
+      ],
+      "descriptions": [
+        "triangles on grid paper with orange dotted bounding rectangles",
+        "triangles with labeled side lengths and perpendicular heights marked with dotted lines"
+      ]
+    },
+    "has_diagrams": true,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Foundation",
+        "cm squared paper"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": false,
+    "has_real_world_context": false,
+    "has_calculator_questions": true,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:30:09.843648+00:00",
+    "updated_at": "2026-02-18T18:43:32.864975+00:00",
+    "extracted_at": "2026-02-18T18:30:08.868691+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 18,
+    "estimated_time_minutes": 55,
+    "difficulty_level": "foundation",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "3ce973db-29a0-46bd-ad84-0a8642070d2d",
+    "file_name": "Cazoom Maths. Fractions. Adding and subtracting fractions with different denominators (A). Answers.pdf",
+    "file_path": "data/input/Cazoom Maths. Fractions. Adding and subtracting fractions with different denominators (A). Answers.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE Foundation",
+    "uk_topic": "Fractions",
+    "uk_subtopic": "Adding and Subtracting Fractions with Different Denominators",
+    "au_year_level": "GCSE Foundation",
+    "au_topic": "Fractions",
+    "au_subtopic": "Adding and Subtracting Fractions with Different Denominators",
+    "acara_strand": "Number and Algebra",
+    "acara_content_codes": null,
+    "title": "Adding and Subtracting Fractions with Different Denominators (A)",
+    "extraction_data": {},
+    "skills_covered": [
+      "interpreting fraction bar models",
+      "using visual models",
+      "simplifying fractions",
+      "subtracting fractions with different denominators",
+      "adding fractions with different denominators",
+      "finding common denominators"
+    ],
+    "prerequisite_skills": [
+      "equivalent fractions",
+      "basic fraction concepts",
+      "multiplication tables"
+    ],
+    "sections": [
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 5,
+        "diagram_descriptions": [
+          "fraction bar models showing visual representation of fractions being added"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 5,
+        "diagram_descriptions": [
+          "fraction bar models showing subtraction of fractions with different denominators"
+        ]
+      }
+    ],
+    "difficulty_progression": "constant",
+    "diagram_inventory": {
+      "count": 11,
+      "types": [
+        "fraction_bar"
+      ],
+      "descriptions": [
+        "fraction bar models divided into eighths showing 1/2 + 3/8",
+        "fraction bar models divided into eighths showing 3/8 + 1/4",
+        "fraction bar models divided into eighths showing 1/8 + 1/2",
+        "fraction bar models divided into sixths showing 1/2 + 1/6",
+        "fraction bar models divided into sixths showing 2/6 + 2/3",
+        "fraction bar models divided into twelfths showing 5/12 + 1/3"
+      ]
+    },
+    "has_diagrams": true,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Foundation"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": false,
+    "has_real_world_context": false,
+    "has_calculator_questions": false,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:30:31.068968+00:00",
+    "updated_at": "2026-02-18T18:43:35.355008+00:00",
+    "extracted_at": "2026-02-18T18:30:30.078715+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 10,
+    "estimated_time_minutes": 30,
+    "difficulty_level": "foundation",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "83eb93a2-67dc-4d16-a767-40573329e6e2",
+    "file_name": "Cazoom Maths. Fractions. Adding and subtracting fractions with different denominators (A).pdf",
+    "file_path": "data/input/Cazoom Maths. Fractions. Adding and subtracting fractions with different denominators (A).pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE Foundation",
+    "uk_topic": "Fractions",
+    "uk_subtopic": "Adding Fractions with Different Denominators",
+    "au_year_level": "GCSE Foundation",
+    "au_topic": "Fractions",
+    "au_subtopic": "Adding Fractions with Different Denominators",
+    "acara_strand": "Number and Algebra",
+    "acara_content_codes": null,
+    "title": "Adding and Subtracting Fractions with Different Denominators (A)",
+    "extraction_data": {},
+    "skills_covered": [
+      "interpreting fraction bar models",
+      "Finding common denominators",
+      "using visual models for fraction operations",
+      "subtracting fractions with different denominators",
+      "finding common denominators",
+      "Using bar models for fractions",
+      "Converting fractions to equivalent forms",
+      "Adding fractions with different denominators"
+    ],
+    "prerequisite_skills": [
+      "Understanding fractions",
+      "Finding equivalent fractions",
+      "Basic multiplication tables"
+    ],
+    "sections": [
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 5,
+        "diagram_descriptions": [
+          "bar models for visualizing fraction addition",
+          "rectangular grids divided into equal parts for each fraction problem"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 5,
+        "diagram_descriptions": [
+          "fraction bar models for each subtraction problem",
+          "worked example showing bar model representation"
+        ]
+      }
+    ],
+    "difficulty_progression": "constant",
+    "diagram_inventory": {
+      "count": 11,
+      "types": [
+        "fraction_bar"
+      ],
+      "descriptions": [
+        "bar model example showing 1/2 + 3/8 = 7/8",
+        "empty bar models for students to complete fraction addition problems",
+        "rectangular grids divided into equal parts corresponding to denominators"
+      ]
+    },
+    "has_diagrams": true,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Tier: Foundation"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": false,
+    "has_real_world_context": false,
+    "has_calculator_questions": false,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:47:27.620373+00:00",
+    "updated_at": "2026-02-18T18:47:32.357041+00:00",
+    "extracted_at": "2026-02-18T18:47:26.591258+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 10,
+    "estimated_time_minutes": 30,
+    "difficulty_level": "foundation",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "4e2ed428-cdf8-426d-8d6e-371084dc6273",
+    "file_name": "Cazoom Maths. Ratio. Exchange Rates. Answers.pdf",
+    "file_path": "data/input/Cazoom Maths. Ratio. Exchange Rates. Answers.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE Foundation",
+    "uk_topic": "Ratio and Proportion",
+    "uk_subtopic": "Currency Exchange Rates",
+    "au_year_level": "GCSE Foundation",
+    "au_topic": "Ratio and Proportion",
+    "au_subtopic": "Currency Exchange Rates",
+    "acara_strand": "Number and Algebra",
+    "acara_content_codes": null,
+    "title": "Exchange Rates",
+    "extraction_data": {},
+    "skills_covered": [
+      "proportional reasoning",
+      "comparison of values",
+      "ratio and proportion",
+      "decimal calculations",
+      "working with decimal numbers",
+      "calculating exchange rates",
+      "multiplication and division",
+      "currency conversion"
+    ],
+    "prerequisite_skills": [
+      "basic multiplication",
+      "basic division",
+      "working with decimals",
+      "understanding of ratio"
+    ],
+    "sections": [
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 18,
+        "diagram_descriptions": []
+      },
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 3,
+        "diagram_descriptions": []
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section C",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 9,
+        "diagram_descriptions": []
+      }
+    ],
+    "difficulty_progression": "constant",
+    "diagram_inventory": {
+      "count": 0,
+      "types": [],
+      "descriptions": []
+    },
+    "has_diagrams": false,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Tier: Foundation"
+      ],
+      "places": [],
+      "currency": [
+        "\u00a31",
+        "\u00a32",
+        "\u00a35",
+        "\u00a318",
+        "\u00a322.70",
+        "\u00a330",
+        "\u00a351.20",
+        "\u00a369.06",
+        "\u00a399.13",
+        "\u00a3115",
+        "\u00a3244",
+        "\u00a3250",
+        "\u00a3267.77",
+        "\u00a3396.43",
+        "\u00a3554",
+        "\u00a3801",
+        "\u00a3946",
+        "\u00a31156.25",
+        "\u00a31500",
+        "\u00a32060",
+        "\u00a33660",
+        "\u00a36.38",
+        "\u00a36.61",
+        "\u00a37.50"
+      ]
+    },
+    "has_word_problems": false,
+    "has_real_world_context": true,
+    "has_calculator_questions": true,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:47:50.115262+00:00",
+    "updated_at": "2026-02-18T18:47:53.721174+00:00",
+    "extracted_at": "2026-02-18T18:47:49.617623+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 30,
+    "estimated_time_minutes": 60,
+    "difficulty_level": "foundation",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "abf55ecb-06b3-4caf-931c-6e0f4741bf7f",
+    "file_name": "Cazoom Maths. Ratio. Exchange Rates.pdf",
+    "file_path": "data/input/Cazoom Maths. Ratio. Exchange Rates.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE Foundation",
+    "uk_topic": "Ratio and Proportion",
+    "uk_subtopic": "Exchange Rates and Currency Conversion",
+    "au_year_level": "GCSE Foundation",
+    "au_topic": "Ratio and Proportion",
+    "au_subtopic": "Exchange Rates and Currency Conversion",
+    "acara_strand": "Number and Algebra",
+    "acara_content_codes": null,
+    "title": "Exchange Rates",
+    "extraction_data": {},
+    "skills_covered": [
+      "multiplication with decimals",
+      "ratio calculations",
+      "proportion",
+      "rate calculations",
+      "decimal multiplication and division",
+      "comparing values",
+      "working with exchange rates",
+      "division with decimals",
+      "currency conversion"
+    ],
+    "prerequisite_skills": [
+      "decimal multiplication",
+      "decimal division",
+      "understanding of ratio",
+      "rounding to 2 decimal places"
+    ],
+    "sections": [
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 9,
+        "diagram_descriptions": []
+      },
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 6,
+        "diagram_descriptions": []
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section C",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 11,
+        "diagram_descriptions": []
+      }
+    ],
+    "difficulty_progression": "constant",
+    "diagram_inventory": {
+      "count": 0,
+      "types": [],
+      "descriptions": []
+    },
+    "has_diagrams": false,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Foundation"
+      ],
+      "places": [],
+      "currency": [
+        "\u00a31",
+        "\u00a32",
+        "\u00a35",
+        "\u00a330",
+        "\u00a3250",
+        "\u00a37.50",
+        "\u00a351.20",
+        "\u00a318",
+        "\u00a3115",
+        "\u00a320",
+        "\u00a3244",
+        "\u00a3554",
+        "\u00a3946",
+        "\u00a3801"
+      ]
+    },
+    "has_word_problems": false,
+    "has_real_world_context": true,
+    "has_calculator_questions": true,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:48:10.620821+00:00",
+    "updated_at": "2026-02-18T18:48:13.2286+00:00",
+    "extracted_at": "2026-02-18T18:48:09.974838+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 26,
+    "estimated_time_minutes": 50,
+    "difficulty_level": "foundation",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "3ffdb5ab-7b92-4fd8-bc5e-85d586f18a4f",
+    "file_name": "Cazoom Maths. Samples and Surveys. Capture Recapture. Answers.pdf",
+    "file_path": "data/input/Cazoom Maths. Samples and Surveys. Capture Recapture. Answers.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE Higher",
+    "uk_topic": "Statistics",
+    "uk_subtopic": "Capture Recapture",
+    "au_year_level": "GCSE Higher",
+    "au_topic": "Statistics",
+    "au_subtopic": "Capture Recapture",
+    "acara_strand": "Statistics and Probability",
+    "acara_content_codes": null,
+    "title": "Capture Recapture ANSWERS",
+    "extraction_data": {},
+    "skills_covered": [
+      "equivalent fractions and ratios",
+      "proportional reasoning",
+      "capture-recapture estimation",
+      "population sampling",
+      "statistical estimation"
+    ],
+    "prerequisite_skills": [
+      "fraction equivalence",
+      "ratio and proportion",
+      "basic statistics",
+      "solving proportions"
+    ],
+    "sections": [
+      {
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 8,
+        "diagram_descriptions": []
+      },
+      {
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 6,
+        "diagram_descriptions": [
+          "proportion tables with sample and population data"
+        ]
+      },
+      {
+        "type": "question_set",
+        "label": "Section C",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 5,
+        "diagram_descriptions": []
+      }
+    ],
+    "difficulty_progression": "easy_to_hard",
+    "diagram_inventory": {
+      "count": 6,
+      "types": [
+        "table"
+      ],
+      "descriptions": [
+        "proportion tables showing marked and total values for samples and populations"
+      ]
+    },
+    "has_diagrams": true,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Tier: Higher"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": true,
+    "has_real_world_context": true,
+    "has_calculator_questions": false,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:48:22.633409+00:00",
+    "updated_at": "2026-02-18T18:48:25.830866+00:00",
+    "extracted_at": "2026-02-18T18:48:21.979998+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 24,
+    "estimated_time_minutes": 40,
+    "difficulty_level": "higher",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "8c09bb5b-9fb8-4379-b62e-ccf3d0209bfb",
+    "file_name": "Cazoom Maths. Samples and Surveys. Capture Recapture.pdf",
+    "file_path": "data/input/Cazoom Maths. Samples and Surveys. Capture Recapture.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE",
+    "uk_topic": "Statistics",
+    "uk_subtopic": "Capture Recapture",
+    "au_year_level": "GCSE",
+    "au_topic": "Statistics",
+    "au_subtopic": "Capture Recapture",
+    "acara_strand": "Statistics and Probability",
+    "acara_content_codes": null,
+    "title": "Capture Recapture",
+    "extraction_data": {},
+    "skills_covered": [
+      "equivalent fractions",
+      "proportion",
+      "ratio",
+      "capture-recapture method",
+      "population estimation",
+      "sample analysis"
+    ],
+    "prerequisite_skills": [
+      "basic fractions",
+      "ratio and proportion",
+      "cross multiplication",
+      "problem solving"
+    ],
+    "sections": [
+      {
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 8,
+        "diagram_descriptions": []
+      },
+      {
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 6,
+        "diagram_descriptions": []
+      },
+      {
+        "type": "question_set",
+        "label": "Section C",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 4,
+        "diagram_descriptions": []
+      }
+    ],
+    "difficulty_progression": "easy_to_hard",
+    "diagram_inventory": {
+      "count": 6,
+      "types": [
+        "table"
+      ],
+      "descriptions": [
+        "sample population tables with marked and total columns"
+      ]
+    },
+    "has_diagrams": true,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Tier: Higher"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": true,
+    "has_real_world_context": true,
+    "has_calculator_questions": true,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:48:34.644147+00:00",
+    "updated_at": "2026-02-18T18:48:37.021356+00:00",
+    "extracted_at": "2026-02-18T18:48:33.984561+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 24,
+    "estimated_time_minutes": 45,
+    "difficulty_level": "higher",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "5ba455a1-cdca-4fcb-b6a0-728d50129283",
+    "file_name": "Cazoom Maths. Scatter Graphs. Reading and Drawing Scatter Graphs. Answers.pdf",
+    "file_path": "data/input/Cazoom Maths. Scatter Graphs. Reading and Drawing Scatter Graphs. Answers.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE",
+    "uk_topic": "Statistics",
+    "uk_subtopic": "Scatter Graphs",
+    "au_year_level": "GCSE",
+    "au_topic": "Statistics",
+    "au_subtopic": "Scatter Graphs",
+    "acara_strand": "Statistics and Probability",
+    "acara_content_codes": null,
+    "title": "Reading and Drawing Scatter Graphs",
+    "extraction_data": {},
+    "skills_covered": [
+      "Reading scatter graphs",
+      "Drawing scatter graphs",
+      "Identifying correlation",
+      "Interpreting data trends",
+      "Explaining limitations of data analysis"
+    ],
+    "prerequisite_skills": [
+      "Plotting coordinates",
+      "Reading scales",
+      "Understanding correlation"
+    ],
+    "sections": [
+      {
+        "type": "question_set",
+        "label": "Question 1",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 3,
+        "diagram_descriptions": [
+          "scatter graph showing age vs salary for 10 employees with labeled points A-J"
+        ]
+      },
+      {
+        "type": "question_set",
+        "label": "Question 2",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 3,
+        "diagram_descriptions": [
+          "scatter graph showing temperature vs number of birds visiting bird table",
+          "data table with temperature and bird count values"
+        ]
+      }
+    ],
+    "difficulty_progression": "easy_to_hard",
+    "diagram_inventory": {
+      "count": 3,
+      "types": [
+        "graph",
+        "table"
+      ],
+      "descriptions": [
+        "scatter graph with age (10-60 years) on x-axis and salary (\u00a30-5000) on y-axis",
+        "scatter graph with temperature (0-35\u00b0C) on x-axis and number of birds (0-80) on y-axis",
+        "data table showing temperature and corresponding bird counts"
+      ]
+    },
+    "has_diagrams": true,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Tier: Foundation/Higher"
+      ],
+      "places": [],
+      "currency": [
+        "\u00a31400",
+        "\u00a32100",
+        "\u00a33000",
+        "\u00a32700",
+        "\u00a32500",
+        "\u00a33500",
+        "\u00a32900",
+        "\u00a34000",
+        "\u00a33600"
+      ]
+    },
+    "has_word_problems": true,
+    "has_real_world_context": true,
+    "has_calculator_questions": false,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:48:49.056425+00:00",
+    "updated_at": "2026-02-18T18:48:51.922398+00:00",
+    "extracted_at": "2026-02-18T18:48:48.625572+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 6,
+    "estimated_time_minutes": 25,
+    "difficulty_level": "mixed",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "62abb0a1-a54f-4b40-9266-f53d52f46fe0",
+    "file_name": "Cazoom Maths. Scatter Graphs. Reading and Drawing Scatter Graphs.pdf",
+    "file_path": "data/input/Cazoom Maths. Scatter Graphs. Reading and Drawing Scatter Graphs.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE",
+    "uk_topic": "Statistics",
+    "uk_subtopic": "Scatter graphs and correlation",
+    "au_year_level": "GCSE",
+    "au_topic": "Statistics",
+    "au_subtopic": "Scatter graphs and correlation",
+    "acara_strand": "Statistics and Probability",
+    "acara_content_codes": null,
+    "title": "Reading and Drawing Scatter Graphs",
+    "extraction_data": {},
+    "skills_covered": [
+      "reading scatter graphs",
+      "completing data tables from graphs",
+      "drawing scatter graphs",
+      "identifying correlation",
+      "interpreting relationships from data",
+      "evaluating statistical conclusions"
+    ],
+    "prerequisite_skills": [
+      "plotting coordinates",
+      "reading scales on graphs",
+      "understanding correlation"
+    ],
+    "sections": [
+      {
+        "type": "question_set",
+        "label": "Question 1",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 3,
+        "diagram_descriptions": [
+          "scatter graph showing age vs salary for 10 employees with labeled points A-J"
+        ]
+      },
+      {
+        "type": "question_set",
+        "label": "Question 2",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 2,
+        "diagram_descriptions": [
+          "empty coordinate grid for temperature vs number of birds",
+          "data table with temperature and bird count values"
+        ]
+      }
+    ],
+    "difficulty_progression": "scaffolded",
+    "diagram_inventory": {
+      "count": 3,
+      "types": [
+        "coordinate_grid",
+        "table"
+      ],
+      "descriptions": [
+        "scatter graph with age (10-60 years) on x-axis and salary (\u00a30-5000) on y-axis showing 10 labeled data points",
+        "empty coordinate grid with temperature (0-35\u00b0C) on x-axis and number of birds (0-80) on y-axis",
+        "data table showing temperature and corresponding number of birds observed"
+      ]
+    },
+    "has_diagrams": true,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Foundation/Higher"
+      ],
+      "places": [],
+      "currency": [
+        "\u00a3"
+      ]
+    },
+    "has_word_problems": true,
+    "has_real_world_context": true,
+    "has_calculator_questions": false,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:49:02.823585+00:00",
+    "updated_at": "2026-02-18T18:49:05.363418+00:00",
+    "extracted_at": "2026-02-18T18:49:02.354573+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 7,
+    "estimated_time_minutes": 25,
+    "difficulty_level": "mixed",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "5473655f-2759-4bb6-b9fd-ed84c80c62ff",
+    "file_name": "Cazoom Maths. Simplification. Algebraic Fractions (A). Answers.pdf",
+    "file_path": "data/input/Cazoom Maths. Simplification. Algebraic Fractions (A). Answers.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE",
+    "uk_topic": "Algebra",
+    "uk_subtopic": "Algebraic Fractions",
+    "au_year_level": "GCSE",
+    "au_topic": "Algebra",
+    "au_subtopic": "Algebraic Fractions",
+    "acara_strand": "Number and Algebra",
+    "acara_content_codes": null,
+    "title": "Algebraic Fractions (A)",
+    "extraction_data": {},
+    "skills_covered": [
+      "Simplifying algebraic fractions",
+      "Cancelling common factors",
+      "Factoring algebraic expressions",
+      "Reducing fractions to lowest terms"
+    ],
+    "prerequisite_skills": [
+      "Factoring polynomials",
+      "Basic fraction operations",
+      "Algebraic manipulation",
+      "Finding common factors"
+    ],
+    "sections": [
+      {
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 12,
+        "diagram_descriptions": []
+      },
+      {
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 18,
+        "diagram_descriptions": []
+      }
+    ],
+    "difficulty_progression": "easy_to_hard",
+    "diagram_inventory": {
+      "count": 0,
+      "types": [],
+      "descriptions": []
+    },
+    "has_diagrams": false,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Tier: Higher"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": false,
+    "has_real_world_context": false,
+    "has_calculator_questions": false,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:49:12.75504+00:00",
+    "updated_at": "2026-02-18T18:49:16.410002+00:00",
+    "extracted_at": "2026-02-18T18:49:12.378544+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 30,
+    "estimated_time_minutes": 60,
+    "difficulty_level": "higher",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "1cc44e63-1d3c-499b-ba1e-b57c931374c6",
+    "file_name": "Cazoom Maths. Simplification. Algebraic Fractions (A).pdf",
+    "file_path": "data/input/Cazoom Maths. Simplification. Algebraic Fractions (A).pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE",
+    "uk_topic": "Algebra",
+    "uk_subtopic": "Algebraic Fractions",
+    "au_year_level": "GCSE",
+    "au_topic": "Algebra",
+    "au_subtopic": "Algebraic Fractions",
+    "acara_strand": "Number and Algebra",
+    "acara_content_codes": null,
+    "title": "Algebraic Fractions (A)",
+    "extraction_data": {},
+    "skills_covered": [
+      "Simplifying algebraic fractions",
+      "Factoring algebraic expressions",
+      "Canceling common factors",
+      "Working with polynomial fractions"
+    ],
+    "prerequisite_skills": [
+      "Factoring quadratic expressions",
+      "Finding common factors",
+      "Basic fraction operations",
+      "Algebraic manipulation"
+    ],
+    "sections": [
+      {
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 12,
+        "diagram_descriptions": []
+      },
+      {
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 18,
+        "diagram_descriptions": []
+      }
+    ],
+    "difficulty_progression": "easy_to_hard",
+    "diagram_inventory": {
+      "count": 0,
+      "types": [],
+      "descriptions": []
+    },
+    "has_diagrams": false,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": false,
+    "has_real_world_context": false,
+    "has_calculator_questions": false,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:49:24.31378+00:00",
+    "updated_at": "2026-02-18T18:49:26.66254+00:00",
+    "extracted_at": "2026-02-18T18:49:23.916053+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 30,
+    "estimated_time_minutes": 45,
+    "difficulty_level": "higher",
+    "has_equations": false,
+    "equation_types": [],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "d42f9582-4477-4e2e-8a43-d6b35d46cf39",
+    "file_name": "Cazoom Maths. Trigonometry. Finding Exact Trig Values. Answers.pdf",
+    "file_path": "data/input/Cazoom Maths. Trigonometry. Finding Exact Trig Values. Answers.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE",
+    "uk_topic": "Trigonometry",
+    "uk_subtopic": "Exact trigonometric values",
+    "au_year_level": "GCSE",
+    "au_topic": "Trigonometry",
+    "au_subtopic": "Exact trigonometric values",
+    "acara_strand": "Measurement and Geometry",
+    "acara_content_codes": null,
+    "title": "Finding Exact Trig Values",
+    "extraction_data": {},
+    "skills_covered": [
+      "memorizing exact trig values",
+      "Pythagoras theorem",
+      "exact trigonometric values",
+      "right-angled triangle analysis",
+      "reading unit circle diagrams",
+      "working with special angles",
+      "finding trigonometric ratios",
+      "trigonometric ratios",
+      "special angle calculations",
+      "using Pythagoras theorem"
+    ],
+    "prerequisite_skills": [
+      "basic trigonometry",
+      "Pythagoras theorem",
+      "coordinate geometry",
+      "right-angled triangles"
+    ],
+    "sections": [
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 6,
+        "diagram_descriptions": [
+          "unit circle with radius 1 showing sin and cos values for angles 0\u00b0, 30\u00b0, 45\u00b0, 60\u00b0, 90\u00b0"
+        ]
+      },
+      {
+        "page": 1,
+        "type": "worked_example",
+        "label": "Section B",
+        "has_diagrams": true,
+        "has_equations": true,
+        "question_count": 1,
+        "diagram_descriptions": [
+          "equilateral triangle split in half showing 30-60-90 triangle with sides labeled"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section C",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 1,
+        "diagram_descriptions": [
+          "two right-angled triangles with 30\u00b0 and 60\u00b0 angles",
+          "trigonometric values table for 30\u00b0 and 60\u00b0"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section D",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 1,
+        "diagram_descriptions": [
+          "isosceles right-angled triangle with 45\u00b0 angle",
+          "trigonometric values table for 45\u00b0"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section E",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 1,
+        "diagram_descriptions": [
+          "trigonometric values table for 0\u00b0, 30\u00b0, 45\u00b0, 60\u00b0, 90\u00b0"
+        ]
+      }
+    ],
+    "difficulty_progression": "scaffolded",
+    "diagram_inventory": {
+      "count": 2,
+      "types": [
+        "unit_circle",
+        "geometric_shape"
+      ],
+      "descriptions": [
+        "unit circle diagram showing trigonometric values for standard angles",
+        "30-60-90 triangle with Pythagorean theorem calculation"
+      ]
+    },
+    "has_diagrams": true,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Foundation/Higher"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": false,
+    "has_real_world_context": false,
+    "has_calculator_questions": false,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:49:46.363942+00:00",
+    "updated_at": "2026-02-18T18:49:49.130745+00:00",
+    "extracted_at": "2026-02-18T18:49:45.83374+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 10,
+    "estimated_time_minutes": 50,
+    "difficulty_level": "mixed",
+    "has_equations": true,
+    "equation_types": [
+      "trigonometric"
+    ],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "9d927604-8764-40e7-b933-c9f018afd527",
+    "file_name": "Cazoom Maths. Trigonometry. Finding Exact Trig Values.pdf",
+    "file_path": "data/input/Cazoom Maths. Trigonometry. Finding Exact Trig Values.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE",
+    "uk_topic": "Trigonometry",
+    "uk_subtopic": "Finding Exact Trig Values",
+    "au_year_level": "GCSE",
+    "au_topic": "Trigonometry",
+    "au_subtopic": "Finding Exact Trig Values",
+    "acara_strand": "Measurement and Geometry",
+    "acara_content_codes": null,
+    "title": "Finding Exact Trig Values",
+    "extraction_data": {},
+    "skills_covered": [
+      "special angle values",
+      "right-angled triangles",
+      "applying Pythagoras theorem",
+      "reading trigonometric values from unit circle",
+      "exact trigonometric values",
+      "Pythagoras' theorem",
+      "identifying sine and cosine values for standard angles",
+      "trigonometric ratios",
+      "using special triangles for exact values"
+    ],
+    "prerequisite_skills": [
+      "basic trigonometric ratios",
+      "Pythagoras theorem",
+      "understanding of coordinate systems",
+      "angle measurement"
+    ],
+    "sections": [
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 6,
+        "diagram_descriptions": [
+          "unit circle with trigonometric values marked on axes and angles at 0\u00b0, 30\u00b0, 45\u00b0, 60\u00b0, 90\u00b0"
+        ]
+      },
+      {
+        "page": 1,
+        "type": "worked_example",
+        "label": "Section B",
+        "has_diagrams": true,
+        "has_equations": true,
+        "question_count": 1,
+        "diagram_descriptions": [
+          "equilateral triangle split in half showing 30-60-90 triangle with sides labeled"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section C",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 8,
+        "diagram_descriptions": [
+          "30-60-90 right triangle with sides labeled 1, 2, and hypotenuse",
+          "60-30-90 right triangle with sides labeled 1, 2, and missing side",
+          "table for trigonometric values at 30\u00b0 and 60\u00b0"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section D",
+        "has_diagrams": true,
+        "has_equations": false,
+        "question_count": 4,
+        "diagram_descriptions": [
+          "45-45-90 isosceles right triangle with two sides of length 1 and hypotenuse to be found",
+          "table for trigonometric values at 45\u00b0"
+        ]
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section E",
+        "has_diagrams": false,
+        "has_equations": false,
+        "question_count": 15,
+        "diagram_descriptions": [
+          "comprehensive table for all exact trigonometric values from 0\u00b0 to 90\u00b0"
+        ]
+      }
+    ],
+    "difficulty_progression": "scaffolded",
+    "diagram_inventory": {
+      "count": 2,
+      "types": [
+        "coordinate_grid",
+        "geometric_shape"
+      ],
+      "descriptions": [
+        "unit circle with coordinate axes showing trigonometric values for standard angles",
+        "30-60-90 triangle with sides 1, 2, and height h to be calculated using Pythagoras"
+      ]
+    },
+    "has_diagrams": true,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": false,
+    "has_real_world_context": false,
+    "has_calculator_questions": false,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:50:10.062289+00:00",
+    "updated_at": "2026-02-18T18:50:12.858747+00:00",
+    "extracted_at": "2026-02-18T18:50:09.816207+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 22,
+    "estimated_time_minutes": 45,
+    "difficulty_level": "mixed",
+    "has_equations": true,
+    "equation_types": [
+      "trigonometric"
+    ],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "552d51c0-f644-429a-8866-cdb952ff4428",
+    "file_name": "Cazoom-Maths-Solving-Equations-Forming-and-Solving-Linear Equations 1 Answers.pdf",
+    "file_path": "data/input/Cazoom-Maths-Solving-Equations-Forming-and-Solving-Linear Equations 1 Answers.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE Foundation",
+    "uk_topic": "Algebra",
+    "uk_subtopic": "Linear Equations",
+    "au_year_level": "GCSE Foundation",
+    "au_topic": "Algebra",
+    "au_subtopic": "Linear Equations",
+    "acara_strand": "Number and Algebra",
+    "acara_content_codes": null,
+    "title": "Forming and Solving Linear Equations: x + a = b and x - a = b",
+    "extraction_data": {},
+    "skills_covered": [
+      "identifying correct equation representations",
+      "forming linear equations from word problems",
+      "solving linear equations",
+      "interpreting real-world contexts algebraically",
+      "translating scenarios into algebraic expressions"
+    ],
+    "prerequisite_skills": [
+      "basic arithmetic operations",
+      "understanding of variables",
+      "substitution"
+    ],
+    "sections": [
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": false,
+        "has_equations": true,
+        "question_count": 2,
+        "diagram_descriptions": []
+      },
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": false,
+        "has_equations": true,
+        "question_count": 5,
+        "diagram_descriptions": []
+      },
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section C",
+        "has_diagrams": false,
+        "has_equations": true,
+        "question_count": 4,
+        "diagram_descriptions": []
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section D",
+        "has_diagrams": false,
+        "has_equations": true,
+        "question_count": 6,
+        "diagram_descriptions": []
+      }
+    ],
+    "difficulty_progression": "scaffolded",
+    "diagram_inventory": {
+      "count": 0,
+      "types": [],
+      "descriptions": []
+    },
+    "has_diagrams": false,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Foundation"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": true,
+    "has_real_world_context": true,
+    "has_calculator_questions": false,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:50:27.821607+00:00",
+    "updated_at": "2026-02-18T18:50:30.692647+00:00",
+    "extracted_at": "2026-02-18T18:50:27.140275+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 17,
+    "estimated_time_minutes": 50,
+    "difficulty_level": "foundation",
+    "has_equations": true,
+    "equation_types": [
+      "linear"
+    ],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  },
+  {
+    "id": "935d8f47-ac34-4a44-8d6b-8f48deeb16d7",
+    "file_name": "Cazoom-Maths-Solving-Equations-Forming-and-Solving-Linear Equations 1.pdf",
+    "file_path": "data/input/Cazoom-Maths-Solving-Equations-Forming-and-Solving-Linear Equations 1.pdf",
+    "storage_path": null,
+    "storage_url": null,
+    "uk_year_level": "GCSE Foundation",
+    "uk_topic": "Algebra",
+    "uk_subtopic": "Linear Equations",
+    "au_year_level": "GCSE Foundation",
+    "au_topic": "Algebra",
+    "au_subtopic": "Linear Equations",
+    "acara_strand": "Number and Algebra",
+    "acara_content_codes": null,
+    "title": "Forming and Solving Linear Equations: x + a = b and x - a = b",
+    "extraction_data": {},
+    "skills_covered": [
+      "solving linear equations of form x - a = b",
+      "forming linear equations from word problems",
+      "translating real-world scenarios into algebraic expressions",
+      "solving linear equations of the form x + a = b",
+      "solving linear equations of form x + a = b",
+      "choosing correct equation representation",
+      "solving linear equations of the form x - a = b"
+    ],
+    "prerequisite_skills": [
+      "basic algebraic notation",
+      "understanding of inverse operations",
+      "substitution",
+      "interpreting word problems"
+    ],
+    "sections": [
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section A",
+        "has_diagrams": false,
+        "has_equations": true,
+        "question_count": 2,
+        "diagram_descriptions": []
+      },
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section B",
+        "has_diagrams": false,
+        "has_equations": true,
+        "question_count": 2,
+        "diagram_descriptions": []
+      },
+      {
+        "page": 1,
+        "type": "question_set",
+        "label": "Section C",
+        "has_diagrams": false,
+        "has_equations": true,
+        "question_count": 4,
+        "diagram_descriptions": []
+      },
+      {
+        "page": 2,
+        "type": "question_set",
+        "label": "Section D",
+        "has_diagrams": false,
+        "has_equations": true,
+        "question_count": 6,
+        "diagram_descriptions": []
+      }
+    ],
+    "difficulty_progression": "scaffolded",
+    "diagram_inventory": {
+      "count": 0,
+      "types": [],
+      "descriptions": []
+    },
+    "has_diagrams": false,
+    "uk_specific_elements": {
+      "terms": [
+        "GCSE Tier: Foundation"
+      ],
+      "places": [],
+      "currency": []
+    },
+    "has_word_problems": true,
+    "has_real_world_context": true,
+    "has_calculator_questions": false,
+    "has_extension_tasks": false,
+    "status": "completed",
+    "extraction_method": "vision_api",
+    "error_log": null,
+    "created_at": "2026-02-18T18:50:46.597929+00:00",
+    "updated_at": "2026-02-18T18:50:49.227819+00:00",
+    "extracted_at": "2026-02-18T18:50:45.999012+00:00",
+    "page_count": null,
+    "file_size_bytes": null,
+    "model_version": null,
+    "total_questions": 14,
+    "estimated_time_minutes": 45,
+    "difficulty_level": "foundation",
+    "has_equations": true,
+    "equation_types": [
+      "linear"
+    ],
+    "master_id": null,
+    "wp_id": null,
+    "legacy_id": null,
+    "description": null,
+    "learning_objective": null,
+    "prerequisite_knowledge": null,
+    "resource_type": null,
+    "gcse_tier": null,
+    "target_grade": null,
+    "worksheet_download_url": null,
+    "answer_download_url": null,
+    "dropbox_url": null,
+    "master_url": null,
+    "featured_image_url": null,
+    "is_free": false,
+    "master_status": null
+  }
+]
